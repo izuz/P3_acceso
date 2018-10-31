@@ -107,7 +107,7 @@ public class DOM {
         try {
             
             //creamos un nodo para el titulo, se crea tipo texto y se añade
-            Node ntitulo = doc.createElement("Título");
+            Node ntitulo = doc.createElement("Titulo");
             Node ntitulo_text = doc.createTextNode(titulo);
             ntitulo.appendChild(ntitulo_text);
             
@@ -128,7 +128,7 @@ public class DOM {
             Node raiz = doc.getChildNodes().item(0);
             raiz.appendChild(nlibro);
             
-            return 0;
+            return 0;   
             
         } catch (Exception e) {
             e.printStackTrace();

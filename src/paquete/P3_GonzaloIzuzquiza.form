@@ -1,17 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
-  <NonVisualComponents>
-    <Container class="javax.swing.JMenu" name="jMenu2">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="jMenu2"/>
-      </Properties>
-
-      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
-        <Property name="useNullLayout" type="boolean" value="true"/>
-      </Layout>
-    </Container>
-  </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
   </Properties>
@@ -41,8 +30,8 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="abrir" max="32767" attributes="0"/>
                   <Component id="annadir" max="32767" attributes="0"/>
-                  <Component id="mostrar" alignment="0" pref="204" max="32767" attributes="0"/>
-                  <Component id="guardar" alignment="0" pref="204" max="32767" attributes="0"/>
+                  <Component id="mostrar" alignment="0" pref="203" max="32767" attributes="0"/>
+                  <Component id="guardar" alignment="0" pref="203" max="32767" attributes="0"/>
                   <Group type="102" alignment="1" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
@@ -102,7 +91,7 @@
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="annadir" min="-2" pref="48" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace pref="31" max="32767" attributes="0"/>
                       <Component id="annadido" min="-2" pref="41" max="-2" attributes="0"/>
                   </Group>
               </Group>

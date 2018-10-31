@@ -16,7 +16,7 @@ public class P3_GonzaloIzuzquiza extends javax.swing.JFrame {
         initComponents(); 
         this.getContentPane().setBackground(Color.RED); // damos color al fondo del jFrame
         this.setLocationRelativeTo(null); // con esto hacemos que la pnatalla se abra en el centro de la pantalla
-        setSize(800,500); //con esto damo un tamñano pasando dos parametros, siendo ancho y alto, a la pantalla
+        setSize(840,540); //con esto damo un tamñano pasando dos parametros, siendo ancho y alto, a la pantalla
     }
     
 
@@ -30,7 +30,6 @@ public class P3_GonzaloIzuzquiza extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jMenu2 = new javax.swing.JMenu();
         jScrollPane1 = new javax.swing.JScrollPane();
         texto = new javax.swing.JTextArea();
         abrir = new javax.swing.JButton();
@@ -45,8 +44,6 @@ public class P3_GonzaloIzuzquiza extends javax.swing.JFrame {
         texto_titulo = new javax.swing.JTextField();
         annadido = new javax.swing.JLabel();
         cargado = new javax.swing.JLabel();
-
-        jMenu2.setText("jMenu2");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -117,8 +114,8 @@ public class P3_GonzaloIzuzquiza extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(abrir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(annadir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(mostrar, javax.swing.GroupLayout.DEFAULT_SIZE, 204, Short.MAX_VALUE)
-                    .addComponent(guardar, javax.swing.GroupLayout.DEFAULT_SIZE, 204, Short.MAX_VALUE)
+                    .addComponent(mostrar, javax.swing.GroupLayout.DEFAULT_SIZE, 203, Short.MAX_VALUE)
+                    .addComponent(guardar, javax.swing.GroupLayout.DEFAULT_SIZE, 203, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
@@ -166,7 +163,7 @@ public class P3_GonzaloIzuzquiza extends javax.swing.JFrame {
                             .addComponent(texto_titulo, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addComponent(annadir, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
                         .addComponent(annadido, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
@@ -175,23 +172,30 @@ public class P3_GonzaloIzuzquiza extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void abrirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_abrirMouseClicked
-                //creamos el chooser
+                //creamos el file chooser
         JFileChooser ch = new JFileChooser();
         
         try {
             if(ch.showOpenDialog(null) == ch.APPROVE_OPTION){
                 File fichero = ch.getSelectedFile(); // ruta en la que va a buscar
                 gesDom.abrir_XML_DOM (fichero); // le pasamos la ruta al reader para que lo lea
+                cargado.setText("Archivo cargado correctamente");
             }
         } catch (Exception e) {
              System.out.println("Error"); // si algo se hace mal dará error
         }
-        cargado.setText("Archivo cargado correctamente");
+        
     }//GEN-LAST:event_abrirMouseClicked
 
     private void annadirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_annadirMouseClicked
         gesDom.annadirDOM(texto_publicado.getText(), texto_autor.getText(), texto_titulo.getText()); // añade al documento otro libro
-        annadido.setText("Añadido correctamente");
+        if( texto_publicado.getText() != null){
+                if (texto_autor.getText() != null){
+                    if (texto_titulo.getText() != null){
+                          annadido.setText("Añadido correctamente");
+                }
+            }
+        }
     }//GEN-LAST:event_annadirMouseClicked
 
     private void mostrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mostrarMouseClicked
@@ -199,7 +203,20 @@ public class P3_GonzaloIzuzquiza extends javax.swing.JFrame {
     }//GEN-LAST:event_mostrarMouseClicked
 
     private void guardarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_guardarMouseClicked
-       
+            //creamos el file chooser
+            JFileChooser ch = new JFileChooser();
+            
+        try {
+            if (ch.showSaveDialog(null) == ch.APPROVE_OPTION){
+                String localizacion = ch.getSelectedFile().getAbsolutePath();
+                
+                //ahora ya con la localizacion seleccionada se la paso a la funcion escribir
+                //escribirTextoFicheroBufferedWriter // gesDom.guardarDOMcomoFILE(texto.getText(), localizacion);
+                
+            }
+        } catch (Exception e) {
+        }
+        
     }//GEN-LAST:event_guardarMouseClicked
 
     /**
@@ -244,7 +261,6 @@ public class P3_GonzaloIzuzquiza extends javax.swing.JFrame {
     private javax.swing.JLabel autor;
     private javax.swing.JLabel cargado;
     private javax.swing.JButton guardar;
-    private javax.swing.JMenu jMenu2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JButton mostrar;
     private javax.swing.JLabel publicado;
@@ -254,6 +270,5 @@ public class P3_GonzaloIzuzquiza extends javax.swing.JFrame {
     private javax.swing.JTextField texto_titulo;
     private javax.swing.JLabel titulo;
     // End of variables declaration//GEN-END:variables
-
 
 }
