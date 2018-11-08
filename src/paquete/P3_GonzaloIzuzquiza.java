@@ -188,11 +188,11 @@ public class P3_GonzaloIzuzquiza extends javax.swing.JFrame {
     }//GEN-LAST:event_abrirMouseClicked
 
     private void annadirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_annadirMouseClicked
-        gesDom.annadirDOM(texto_publicado.getText(), texto_autor.getText(), texto_titulo.getText()); // añade al documento otro libro
-        if( texto_publicado.getText() != null){
-                if (texto_autor.getText() != null){
-                    if (texto_titulo.getText() != null){
-                          annadido.setText("Añadido correctamente");
+         if( !texto_publicado.getText().isEmpty()){
+                if (!texto_autor.getText().isEmpty()){
+                    if (!texto_titulo.getText().isEmpty()){
+                        gesDom.annadirDOM(texto_publicado.getText(), texto_autor.getText(), texto_titulo.getText()); // añade al documento otro libro
+                        annadido.setText("Añadido correctamente");
                 }
             }
         }
@@ -211,7 +211,8 @@ public class P3_GonzaloIzuzquiza extends javax.swing.JFrame {
                 String localizacion = ch.getSelectedFile().getAbsolutePath();
                 
                 //ahora ya con la localizacion seleccionada se la paso a la funcion escribir
-                //escribirTextoFicheroBufferedWriter // gesDom.guardarDOMcomoFILE(texto.getText(), localizacion);
+                //escribirTextoFicheroBufferedWriter 
+                //gesDom.guardarDOMcomoFILE(texto.getText(), localizacion);
                 
             }
         } catch (Exception e) {

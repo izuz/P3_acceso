@@ -1,7 +1,7 @@
 package paquete;
 
-import com.sun.org.apache.xerces.internal.parsers.SAXParser;
 import java.io.File;
+import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
@@ -11,6 +11,10 @@ import org.xml.sax.helpers.DefaultHandler;
  * @author Gonzalo Izuzquiza
  */
 public class SAX {
+    
+    SAXParser parser;
+    ManejadorSAX sh;
+    File fXML;
     
     public int abrir_XML_SAX (File fichero){
         
@@ -23,7 +27,7 @@ public class SAX {
             //se crea una instancia que recorrera el xml secuencialmente
             sh = new ManejadorSAX();
             
-            ficheroXML = fichero;
+            fXML = fichero;
             
             return 0;
             
@@ -47,10 +51,10 @@ public class SAX {
         @Override public void startElement (String uri, String localName, String qName, Attributes atts) throws SAXException{
            
             if (qName.equals("Libro")){
-                cadena_resultado = cadena_resultado + "\nPublicado en: " + atts.getValue(atts.qName(0)) + "\n";
+                cadena_resultado = cadena_resultado + "\nPublicado en: " + atts.getValue(atts.getQName(0)) + "\n";
                 ultimoelement = 1;
             }
-            else if (qName.equals("Título")){
+            else if (qName.equals("Titulo")){
                 ultimoelement = 2;
                 cadena_resultado = cadena_resultado + "\nEl título es: ";
             }
@@ -83,16 +87,18 @@ public class SAX {
         }
     }
     
-    public String recorrerSAX (File fXML, ManejadorSAX sh, SAXParser parser){
+    public String recorrerSAX (){
         
-        try {
-            
-            parser.parser(fXML, sh);
+         try{
+            parser.parse(fXML, sh);
             return sh.cadena_resultado;
-            
-        } catch (Exception e) {
-            e.printStackTrace();
-            return "Erro al parserar con SAX";
+        } 
+
+         catch (SAXException e) {
+             e.printStackTrace(); return "Error al parsear con SAX";
+        } 
+         catch (Exception e) {
+            e.printStackTrace(); return "Error al parsear con SAX";
         }
     }
     
