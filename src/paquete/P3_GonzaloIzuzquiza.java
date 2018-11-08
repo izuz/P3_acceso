@@ -44,6 +44,10 @@ public class P3_GonzaloIzuzquiza extends javax.swing.JFrame {
         texto_titulo = new javax.swing.JTextField();
         annadido = new javax.swing.JLabel();
         cargado = new javax.swing.JLabel();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
+        jMenuItem2 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -102,6 +106,20 @@ public class P3_GonzaloIzuzquiza extends javax.swing.JFrame {
         annadido.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
 
         cargado.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+
+        jMenu1.setText("Tipos");
+
+        jMenuItem1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_D, java.awt.event.InputEvent.SHIFT_MASK));
+        jMenuItem1.setText("DOM");
+        jMenu1.add(jMenuItem1);
+
+        jMenuItem2.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_A, java.awt.event.InputEvent.SHIFT_MASK));
+        jMenuItem2.setText("SAX");
+        jMenu1.add(jMenuItem2);
+
+        jMenuBar1.add(jMenu1);
+
+        setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -163,7 +181,7 @@ public class P3_GonzaloIzuzquiza extends javax.swing.JFrame {
                             .addComponent(texto_titulo, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addComponent(annadir, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
                         .addComponent(annadido, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
@@ -183,8 +201,7 @@ public class P3_GonzaloIzuzquiza extends javax.swing.JFrame {
             }
         } catch (Exception e) {
              System.out.println("Error"); // si algo se hace mal dará error
-        }
-        
+        }  
     }//GEN-LAST:event_abrirMouseClicked
 
     private void annadirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_annadirMouseClicked
@@ -262,6 +279,10 @@ public class P3_GonzaloIzuzquiza extends javax.swing.JFrame {
     private javax.swing.JLabel autor;
     private javax.swing.JLabel cargado;
     private javax.swing.JButton guardar;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JButton mostrar;
     private javax.swing.JLabel publicado;
