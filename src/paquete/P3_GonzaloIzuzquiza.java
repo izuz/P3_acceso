@@ -44,10 +44,10 @@ public class P3_GonzaloIzuzquiza extends javax.swing.JFrame {
         texto_titulo = new javax.swing.JTextField();
         annadido = new javax.swing.JLabel();
         cargado = new javax.swing.JLabel();
-        jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
-        jMenuItem2 = new javax.swing.JMenuItem();
+        menu = new javax.swing.JMenuBar();
+        tipos = new javax.swing.JMenu();
+        dom = new javax.swing.JMenuItem();
+        sax = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -107,19 +107,19 @@ public class P3_GonzaloIzuzquiza extends javax.swing.JFrame {
 
         cargado.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
 
-        jMenu1.setText("Tipos");
+        tipos.setText("Tipos");
 
-        jMenuItem1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_D, java.awt.event.InputEvent.SHIFT_MASK));
-        jMenuItem1.setText("DOM");
-        jMenu1.add(jMenuItem1);
+        dom.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_D, java.awt.event.InputEvent.SHIFT_MASK));
+        dom.setText("DOM");
+        tipos.add(dom);
 
-        jMenuItem2.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_A, java.awt.event.InputEvent.SHIFT_MASK));
-        jMenuItem2.setText("SAX");
-        jMenu1.add(jMenuItem2);
+        sax.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_A, java.awt.event.InputEvent.SHIFT_MASK));
+        sax.setText("SAX");
+        tipos.add(sax);
 
-        jMenuBar1.add(jMenu1);
+        menu.add(tipos);
 
-        setJMenuBar(jMenuBar1);
+        setJMenuBar(menu);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -278,18 +278,18 @@ public class P3_GonzaloIzuzquiza extends javax.swing.JFrame {
     private javax.swing.JButton annadir;
     private javax.swing.JLabel autor;
     private javax.swing.JLabel cargado;
+    private javax.swing.JMenuItem dom;
     private javax.swing.JButton guardar;
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JMenuBar menu;
     private javax.swing.JButton mostrar;
     private javax.swing.JLabel publicado;
+    private javax.swing.JMenuItem sax;
     private javax.swing.JTextArea texto;
     private javax.swing.JTextField texto_autor;
     private javax.swing.JTextField texto_publicado;
     private javax.swing.JTextField texto_titulo;
+    private javax.swing.JMenu tipos;
     private javax.swing.JLabel titulo;
     // End of variables declaration//GEN-END:variables
 
