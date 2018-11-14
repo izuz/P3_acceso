@@ -70,13 +70,14 @@ public class P3_GonzaloIzuzquiza extends javax.swing.JFrame {
         texto_titulo = new javax.swing.JTextField();
         annadido = new javax.swing.JLabel();
         cargado = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
         menu = new javax.swing.JMenuBar();
         tipos = new javax.swing.JMenu();
         dom = new javax.swing.JMenuItem();
         sax = new javax.swing.JMenuItem();
         jaxb = new javax.swing.JMenuItem();
 
-        frame_sax.setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        frame_sax.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         texto1.setColumns(20);
         texto1.setRows(5);
@@ -172,7 +173,7 @@ public class P3_GonzaloIzuzquiza extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        frame_jaxb.setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        frame_jaxb.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         texto2.setColumns(20);
         texto2.setRows(5);
@@ -326,6 +327,10 @@ public class P3_GonzaloIzuzquiza extends javax.swing.JFrame {
 
         cargado.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
 
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("DOM");
+
         tipos.setText("Tipos");
 
         dom.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_D, java.awt.event.InputEvent.SHIFT_MASK));
@@ -388,7 +393,8 @@ public class P3_GonzaloIzuzquiza extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(texto_titulo, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(annadido, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(cargado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(cargado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -403,9 +409,11 @@ public class P3_GonzaloIzuzquiza extends javax.swing.JFrame {
                         .addComponent(mostrar, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(guardar, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(29, 29, 29)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(cargado, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(texto_publicado, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(publicado, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -536,6 +544,8 @@ public class P3_GonzaloIzuzquiza extends javax.swing.JFrame {
 
     private void dom2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dom2ActionPerformed
         //JFrame.setVisible(true);
+        //frame_sax.setVisible(false);
+        //frame_jaxb.setVisible(false);
         //JFrame.getContentPane().setBackground(Color.RED);
         //JFrame.setSize(840,540);
         //JFrame.setLocationRelativeTo(null);
@@ -559,6 +569,8 @@ public class P3_GonzaloIzuzquiza extends javax.swing.JFrame {
 
     private void dom1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dom1ActionPerformed
         //JFrame.setVisible(true);
+        //frame_sax.setVisible(false);
+        //frame_jaxb.setVisible(false);
         //JFrame.getContentPane().setBackground(Color.RED);
         //JFrame.setSize(840,540);
         //JFrame.setLocationRelativeTo(null);
@@ -632,6 +644,7 @@ public class P3_GonzaloIzuzquiza extends javax.swing.JFrame {
     private javax.swing.JFrame frame_sax;
     private javax.swing.JButton guardar;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
