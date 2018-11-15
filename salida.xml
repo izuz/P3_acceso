@@ -12,8 +12,8 @@
         <Titulo>El nombre de la rosa</Titulo>
         <Autor>Uberto Eco</Autor>
     </Libro>
-    <Libro publicado_en="h">
-        <Título>h</Título>
-        <Autor>h</Autor>
+    <Libro publicado_en="j">
+        <Titulo>j</Titulo>
+        <Autor>j</Autor>
     </Libro>
 </Libros>

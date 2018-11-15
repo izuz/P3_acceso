@@ -3,26 +3,25 @@ package paquete;
 import java.awt.Color;
 import java.io.File;
 import javax.swing.JFileChooser;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 
 /**
  * @author Gonzalo Izuzquiza
  */
 public class P3_GonzaloIzuzquiza extends javax.swing.JFrame {
 
-        DOM gesDom = new DOM();
-        SAX gesSax = new SAX();
-        JAXB gesJaxb = new JAXB();
+    DOM gesDom = new DOM();
+    SAX gesSax = new SAX();
+    JAXB gesJaxb = new JAXB();
 
-        
     public P3_GonzaloIzuzquiza() {
-        initComponents(); 
+        initComponents();
         this.getContentPane().setBackground(Color.RED); // damos color al fondo del jFrame
         this.setLocationRelativeTo(null); // con esto hacemos que la pnatalla se abra en el centro de la pantalla
-        setSize(840,540); //con esto damo un tamñano pasando dos parametros, siendo ancho y alto, a la pantalla
+        setSize(840, 540); //con esto damo un tamñano pasando dos parametros, siendo ancho y alto, a la pantalla
     }
-    
 
-    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -436,26 +435,26 @@ public class P3_GonzaloIzuzquiza extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void abrirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_abrirMouseClicked
-                //creamos el file chooser
+        //creamos el file chooser
         JFileChooser ch = new JFileChooser();
-        
+
         try {
-            if(ch.showOpenDialog(null) == ch.APPROVE_OPTION){
+            if (ch.showOpenDialog(null) == ch.APPROVE_OPTION) {
                 File fichero = ch.getSelectedFile(); // ruta en la que va a buscar
-                gesDom.abrir_XML_DOM (fichero); // le pasamos la ruta al reader para que lo lea
+                gesDom.abrir_XML_DOM(fichero); // le pasamos la ruta al reader para que lo lea
                 cargado.setText("Archivo cargado correctamente");
             }
         } catch (Exception e) {
-             System.out.println("Error"); // si algo se hace mal dará error
-        }  
+            System.out.println("Error"); // si algo se hace mal dará error
+        }
     }//GEN-LAST:event_abrirMouseClicked
 
     private void annadirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_annadirMouseClicked
-         if( !texto_publicado.getText().isEmpty()){
-                if (!texto_autor.getText().isEmpty()){
-                    if (!texto_titulo.getText().isEmpty()){
-                        gesDom.annadirDOM(texto_publicado.getText(), texto_autor.getText(), texto_titulo.getText()); // añade al documento otro libro
-                        annadido.setText("Añadido correctamente");
+        if (!texto_publicado.getText().isEmpty()) {
+            if (!texto_autor.getText().isEmpty()) {
+                if (!texto_titulo.getText().isEmpty()) {
+                    gesDom.annadirDOM(texto_publicado.getText(), texto_autor.getText(), texto_titulo.getText()); // añade al documento otro libro
+                    annadido.setText("Añadido correctamente");
                 }
             }
         }
@@ -466,35 +465,46 @@ public class P3_GonzaloIzuzquiza extends javax.swing.JFrame {
     }//GEN-LAST:event_mostrarMouseClicked
 
     private void guardarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_guardarMouseClicked
-            //creamos el file chooser
-            JFileChooser ch = new JFileChooser();
-            
+        File fichero;
+        String nombreDelArchivo = "";
+        int ruta;
+        
+        JFileChooser fc = new JFileChooser();
+        fc.setMultiSelectionEnabled(false);
+        fc.setDialogType(JFileChooser.SAVE_DIALOG);
+        ruta = fc.showSaveDialog(this);
+        
         try {
-            if (ch.showSaveDialog(null) == ch.APPROVE_OPTION){
-                String localizacion = ch.getSelectedFile().getAbsolutePath();
-                
-                //ahora ya con la localizacion seleccionada se la paso a la funcion escribir
-                //escribirTextoFicheroBufferedWriter 
-                //gesDom.guardarDOMcomoFILE(texto.getText(), localizacion);
-                
+            if (ruta == JFileChooser.APPROVE_OPTION){
+                fichero = fc.getSelectedFile();
+                nombreDelArchivo = fichero.toString() + ".xml";
+                if(gesDom.guardarDOMcomoFILE(nombreDelArchivo) == 0){
+                    gesDom.guardarDOMcomoFILE(nombreDelArchivo);
+                }
+                else {
+                    String mensaje = "Error al guardar";
+                    JOptionPane.showMessageDialog(new JFrame(), mensaje, "Dialog", JOptionPane.ERROR_MESSAGE);  
+                }
             }
         } catch (Exception e) {
+            if (ruta == JFileChooser.CANCEL_OPTION){
+                System.out.println(ruta);
+            }
         }
-        
     }//GEN-LAST:event_guardarMouseClicked
 
     private void abrir1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_abrir1MouseClicked
-                //creamos el file chooser
+        //creamos el file chooser
         JFileChooser co = new JFileChooser();
-        
+
         try {
-            if(co.showOpenDialog(null) == co.APPROVE_OPTION){
+            if (co.showOpenDialog(null) == co.APPROVE_OPTION) {
                 File fichero = co.getSelectedFile(); // ruta en la que va a buscar
                 gesSax.abrir_XML_SAX(fichero); // le pasamos la ruta al reader para que lo lea
-                cargado1.setText("Archivo cargado correctamente");
+                cargado1.setText("Se van a mostrar los libros de este documento");
             }
         } catch (Exception e) {
-             System.out.println("Error"); // si algo se hace mal dará error
+            System.out.println("Error"); // si algo se hace mal dará error
         }
     }//GEN-LAST:event_abrir1MouseClicked
 
@@ -505,15 +515,15 @@ public class P3_GonzaloIzuzquiza extends javax.swing.JFrame {
     private void abrir2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_abrir2MouseClicked
         //creamos el file chooser
         JFileChooser cs = new JFileChooser();
-        
+
         try {
-            if(cs.showOpenDialog(null) == cs.APPROVE_OPTION){
+            if (cs.showOpenDialog(null) == cs.APPROVE_OPTION) {
                 File fichero = cs.getSelectedFile(); // ruta en la que va a buscar
                 gesJaxb.abrir_XML_JAXB(fichero); // le pasamos la ruta al reader para que lo lea
                 cargado2.setText("Archivo cargado correctamente");
             }
         } catch (Exception e) {
-             System.out.println("Error"); // si algo se hace mal dará error
+            System.out.println("Error"); // si algo se hace mal dará error
         }
     }//GEN-LAST:event_abrir2MouseClicked
 
@@ -530,7 +540,7 @@ public class P3_GonzaloIzuzquiza extends javax.swing.JFrame {
         frame_sax.setVisible(true);
         frame_jaxb.setVisible(false);
         frame_sax.getContentPane().setBackground(Color.RED);
-        frame_sax.setSize(840,540);
+        frame_sax.setSize(870, 540);
         frame_sax.setLocationRelativeTo(null);
     }//GEN-LAST:event_saxActionPerformed
 
@@ -538,7 +548,7 @@ public class P3_GonzaloIzuzquiza extends javax.swing.JFrame {
         frame_sax.setVisible(false);
         frame_jaxb.setVisible(true);
         frame_jaxb.getContentPane().setBackground(Color.RED);
-        frame_jaxb.setSize(840,540);
+        frame_jaxb.setSize(870, 540);
         frame_jaxb.setLocationRelativeTo(null);
     }//GEN-LAST:event_jaxbActionPerformed
 
@@ -547,7 +557,7 @@ public class P3_GonzaloIzuzquiza extends javax.swing.JFrame {
         //frame_sax.setVisible(false);
         //frame_jaxb.setVisible(false);
         //JFrame.getContentPane().setBackground(Color.RED);
-        //JFrame.setSize(840,540);
+        //JFrame.setSize(870,540);
         //JFrame.setLocationRelativeTo(null);
     }//GEN-LAST:event_dom2ActionPerformed
 
@@ -555,7 +565,7 @@ public class P3_GonzaloIzuzquiza extends javax.swing.JFrame {
         frame_sax.setVisible(true);
         frame_jaxb.setVisible(false);
         frame_sax.getContentPane().setBackground(Color.RED);
-        frame_sax.setSize(840,540);
+        frame_sax.setSize(870, 540);
         frame_sax.setLocationRelativeTo(null);
     }//GEN-LAST:event_sax2ActionPerformed
 
@@ -563,7 +573,7 @@ public class P3_GonzaloIzuzquiza extends javax.swing.JFrame {
         frame_sax.setVisible(false);
         frame_jaxb.setVisible(true);
         frame_jaxb.getContentPane().setBackground(Color.RED);
-        frame_jaxb.setSize(840,540);
+        frame_jaxb.setSize(870, 540);
         frame_jaxb.setLocationRelativeTo(null);
     }//GEN-LAST:event_jaxb2ActionPerformed
 
@@ -572,7 +582,7 @@ public class P3_GonzaloIzuzquiza extends javax.swing.JFrame {
         //frame_sax.setVisible(false);
         //frame_jaxb.setVisible(false);
         //JFrame.getContentPane().setBackground(Color.RED);
-        //JFrame.setSize(840,540);
+        //JFrame.setSize(870,540);
         //JFrame.setLocationRelativeTo(null);
     }//GEN-LAST:event_dom1ActionPerformed
 
@@ -580,7 +590,7 @@ public class P3_GonzaloIzuzquiza extends javax.swing.JFrame {
         frame_sax.setVisible(true);
         frame_jaxb.setVisible(false);
         frame_sax.getContentPane().setBackground(Color.RED);
-        frame_sax.setSize(840,540);
+        frame_sax.setSize(840, 540);
         frame_sax.setLocationRelativeTo(null);
     }//GEN-LAST:event_sax1ActionPerformed
 
@@ -588,7 +598,7 @@ public class P3_GonzaloIzuzquiza extends javax.swing.JFrame {
         frame_sax.setVisible(false);
         frame_jaxb.setVisible(true);
         frame_jaxb.getContentPane().setBackground(Color.RED);
-        frame_jaxb.setSize(840,540);
+        frame_jaxb.setSize(870, 540);
         frame_jaxb.setLocationRelativeTo(null);
     }//GEN-LAST:event_jaxb1ActionPerformed
 
