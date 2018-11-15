@@ -136,12 +136,12 @@ public class DOM {
         }
     }
 
-    public int guardarDOMcomoFILE() {
+    public int guardarDOMcomoFILE(String nombre) {
 
         try {
 
-            //creamos un fichero llamado salida.xml
-            File archivo_xml = new File("salida.xml");
+            //creamos un fichero al que le pasamos el nombre para que luego guarde donde quiera
+            File archivo_xml = new File(nombre);
 
             //especificamos el formato de salida
             OutputFormat format = new OutputFormat(doc);

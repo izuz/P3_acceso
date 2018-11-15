@@ -108,7 +108,6 @@ public class P3_GonzaloIzuzquiza extends javax.swing.JFrame {
 
         tipos1.setText("Tipos");
 
-        dom1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_D, java.awt.event.InputEvent.SHIFT_MASK));
         dom1.setText("DOM");
         dom1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -117,7 +116,6 @@ public class P3_GonzaloIzuzquiza extends javax.swing.JFrame {
         });
         tipos1.add(dom1);
 
-        sax1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_A, java.awt.event.InputEvent.SHIFT_MASK));
         sax1.setText("SAX");
         sax1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -126,7 +124,6 @@ public class P3_GonzaloIzuzquiza extends javax.swing.JFrame {
         });
         tipos1.add(sax1);
 
-        jaxb1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_B, java.awt.event.InputEvent.SHIFT_MASK));
         jaxb1.setText("JAXB");
         jaxb1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -204,7 +201,6 @@ public class P3_GonzaloIzuzquiza extends javax.swing.JFrame {
 
         tipos2.setText("Tipos");
 
-        dom2.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_D, java.awt.event.InputEvent.SHIFT_MASK));
         dom2.setText("DOM");
         dom2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -213,7 +209,6 @@ public class P3_GonzaloIzuzquiza extends javax.swing.JFrame {
         });
         tipos2.add(dom2);
 
-        sax2.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_A, java.awt.event.InputEvent.SHIFT_MASK));
         sax2.setText("SAX");
         sax2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -222,7 +217,6 @@ public class P3_GonzaloIzuzquiza extends javax.swing.JFrame {
         });
         tipos2.add(sax2);
 
-        jaxb2.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_B, java.awt.event.InputEvent.SHIFT_MASK));
         jaxb2.setText("JAXB");
         jaxb2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -332,7 +326,6 @@ public class P3_GonzaloIzuzquiza extends javax.swing.JFrame {
 
         tipos.setText("Tipos");
 
-        dom.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_D, java.awt.event.InputEvent.SHIFT_MASK));
         dom.setText("DOM");
         dom.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -341,7 +334,6 @@ public class P3_GonzaloIzuzquiza extends javax.swing.JFrame {
         });
         tipos.add(dom);
 
-        sax.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_A, java.awt.event.InputEvent.SHIFT_MASK));
         sax.setText("SAX");
         sax.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -350,7 +342,6 @@ public class P3_GonzaloIzuzquiza extends javax.swing.JFrame {
         });
         tipos.add(sax);
 
-        jaxb.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_B, java.awt.event.InputEvent.SHIFT_MASK));
         jaxb.setText("JAXB");
         jaxb.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -374,8 +365,8 @@ public class P3_GonzaloIzuzquiza extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(abrir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(annadir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(mostrar, javax.swing.GroupLayout.DEFAULT_SIZE, 203, Short.MAX_VALUE)
-                    .addComponent(guardar, javax.swing.GroupLayout.DEFAULT_SIZE, 203, Short.MAX_VALUE)
+                    .addComponent(mostrar, javax.swing.GroupLayout.DEFAULT_SIZE, 244, Short.MAX_VALUE)
+                    .addComponent(guardar, javax.swing.GroupLayout.DEFAULT_SIZE, 244, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
@@ -385,12 +376,12 @@ public class P3_GonzaloIzuzquiza extends javax.swing.JFrame {
                                 .addComponent(autor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addGap(10, 10, 10)))
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(texto_publicado, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(texto_autor, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(texto_autor, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(texto_titulo, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(titulo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(texto_titulo, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(texto_publicado, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(annadido, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(cargado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -414,8 +405,8 @@ public class P3_GonzaloIzuzquiza extends javax.swing.JFrame {
                         .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(texto_publicado, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(publicado, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(publicado, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(texto_titulo, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(texto_autor, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -423,12 +414,12 @@ public class P3_GonzaloIzuzquiza extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(titulo, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(texto_titulo, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(texto_publicado, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addComponent(annadir, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(annadido, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap())
+                .addGap(58, 58, 58))
         );
 
         pack();
@@ -468,26 +459,25 @@ public class P3_GonzaloIzuzquiza extends javax.swing.JFrame {
         File fichero;
         String nombreDelArchivo = "";
         int ruta;
-        
+
         JFileChooser fc = new JFileChooser();
         fc.setMultiSelectionEnabled(false);
         fc.setDialogType(JFileChooser.SAVE_DIALOG);
         ruta = fc.showSaveDialog(this);
-        
+
         try {
-            if (ruta == JFileChooser.APPROVE_OPTION){
+            if (ruta == JFileChooser.APPROVE_OPTION) {
                 fichero = fc.getSelectedFile();
                 nombreDelArchivo = fichero.toString() + ".xml";
-                if(gesDom.guardarDOMcomoFILE(nombreDelArchivo) == 0){
+                if (gesDom.guardarDOMcomoFILE(nombreDelArchivo) == 0) {
                     gesDom.guardarDOMcomoFILE(nombreDelArchivo);
-                }
-                else {
+                } else {
                     String mensaje = "Error al guardar";
-                    JOptionPane.showMessageDialog(new JFrame(), mensaje, "Dialog", JOptionPane.ERROR_MESSAGE);  
+                    JOptionPane.showMessageDialog(new JFrame(), mensaje, "Dialog", JOptionPane.ERROR_MESSAGE);
                 }
             }
         } catch (Exception e) {
-            if (ruta == JFileChooser.CANCEL_OPTION){
+            if (ruta == JFileChooser.CANCEL_OPTION) {
                 System.out.println(ruta);
             }
         }
@@ -553,12 +543,12 @@ public class P3_GonzaloIzuzquiza extends javax.swing.JFrame {
     }//GEN-LAST:event_jaxbActionPerformed
 
     private void dom2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dom2ActionPerformed
-        //JFrame.setVisible(true);
-        //frame_sax.setVisible(false);
-        //frame_jaxb.setVisible(false);
-        //JFrame.getContentPane().setBackground(Color.RED);
-        //JFrame.setSize(870,540);
-        //JFrame.setLocationRelativeTo(null);
+        this.setVisible(true);
+        frame_sax.setVisible(false);
+        frame_jaxb.setVisible(false);
+        this.getContentPane().setBackground(Color.RED);
+        this.setSize(870, 540);
+        this.setLocationRelativeTo(null);
     }//GEN-LAST:event_dom2ActionPerformed
 
     private void sax2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sax2ActionPerformed
@@ -578,12 +568,12 @@ public class P3_GonzaloIzuzquiza extends javax.swing.JFrame {
     }//GEN-LAST:event_jaxb2ActionPerformed
 
     private void dom1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dom1ActionPerformed
-        //JFrame.setVisible(true);
-        //frame_sax.setVisible(false);
-        //frame_jaxb.setVisible(false);
-        //JFrame.getContentPane().setBackground(Color.RED);
-        //JFrame.setSize(870,540);
-        //JFrame.setLocationRelativeTo(null);
+        this.setVisible(true);
+        frame_sax.setVisible(false);
+        frame_jaxb.setVisible(false);
+        this.getContentPane().setBackground(Color.RED);
+        this.setSize(870, 540);
+        this.setLocationRelativeTo(null);
     }//GEN-LAST:event_dom1ActionPerformed
 
     private void sax1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sax1ActionPerformed
