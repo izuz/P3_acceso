@@ -581,7 +581,7 @@ public class P3_GonzaloIzuzquiza extends javax.swing.JFrame {
         frame_jaxb.setVisible(false);
         this.setVisible(false);
         frame_sax.getContentPane().setBackground(Color.RED);
-        frame_sax.setSize(840, 540);
+        frame_sax.setSize(870, 540);
         frame_sax.setLocationRelativeTo(null);
     }//GEN-LAST:event_sax1ActionPerformed
 
