@@ -525,6 +525,7 @@ public class P3_GonzaloIzuzquiza extends javax.swing.JFrame {
     private void saxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saxActionPerformed
         frame_sax.setVisible(true);
         frame_jaxb.setVisible(false);
+        this.setVisible(false);
         frame_sax.getContentPane().setBackground(Color.RED);
         frame_sax.setSize(870, 540);
         frame_sax.setLocationRelativeTo(null);
@@ -533,6 +534,7 @@ public class P3_GonzaloIzuzquiza extends javax.swing.JFrame {
     private void jaxbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jaxbActionPerformed
         frame_sax.setVisible(false);
         frame_jaxb.setVisible(true);
+        this.setVisible(false);
         frame_jaxb.getContentPane().setBackground(Color.RED);
         frame_jaxb.setSize(870, 540);
         frame_jaxb.setLocationRelativeTo(null);
@@ -550,6 +552,7 @@ public class P3_GonzaloIzuzquiza extends javax.swing.JFrame {
     private void sax2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sax2ActionPerformed
         frame_sax.setVisible(true);
         frame_jaxb.setVisible(false);
+        this.setVisible(false);
         frame_sax.getContentPane().setBackground(Color.RED);
         frame_sax.setSize(870, 540);
         frame_sax.setLocationRelativeTo(null);
@@ -558,6 +561,7 @@ public class P3_GonzaloIzuzquiza extends javax.swing.JFrame {
     private void jaxb2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jaxb2ActionPerformed
         frame_sax.setVisible(false);
         frame_jaxb.setVisible(true);
+        this.setVisible(false);
         frame_jaxb.getContentPane().setBackground(Color.RED);
         frame_jaxb.setSize(870, 540);
         frame_jaxb.setLocationRelativeTo(null);
@@ -575,6 +579,7 @@ public class P3_GonzaloIzuzquiza extends javax.swing.JFrame {
     private void sax1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sax1ActionPerformed
         frame_sax.setVisible(true);
         frame_jaxb.setVisible(false);
+        this.setVisible(false);
         frame_sax.getContentPane().setBackground(Color.RED);
         frame_sax.setSize(840, 540);
         frame_sax.setLocationRelativeTo(null);
@@ -583,6 +588,7 @@ public class P3_GonzaloIzuzquiza extends javax.swing.JFrame {
     private void jaxb1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jaxb1ActionPerformed
         frame_sax.setVisible(false);
         frame_jaxb.setVisible(true);
+        this.setVisible(false);
         frame_jaxb.getContentPane().setBackground(Color.RED);
         frame_jaxb.setSize(870, 540);
         frame_jaxb.setLocationRelativeTo(null);
